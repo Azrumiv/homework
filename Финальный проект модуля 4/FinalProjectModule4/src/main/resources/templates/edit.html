@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование заметки</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{'/update/' + ${webNote.getId()}}" th:object="${webNote}">
+    <!-- Форма для обновления заметки, отправляющая данные методом POST -->
+    <label for="note">Введите заметку:</label>
+    <input type="text" th:field="*{note}" id="note"/>
+    <!-- Поле ввода текста для обновления заметки -->
+    <input type="submit" value="Обновить заметку"/>
+    <!-- Кнопка отправки формы для обновления заметки -->
+</form>
+</body>
+</html>

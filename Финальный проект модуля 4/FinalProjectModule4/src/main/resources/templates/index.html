@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://thymeleaf.org">
+<head>
+	<meta charset = "UTF-8">
+	<title>Список заметок</title>
+</head>
+<body>
+<div th:each = "note : ${notes}"> <!-- Цикл для перебора заметок из списка -->
+	<a th:href="@{/{id} (id=${note.getId()})" <!-- Создание ссылки с идентификатором заметки -->
+	th:text="${note.getNote()}">содержание</a> <!-- Отображение текста заметки внутри ссылки -->
+</div>
+
+<br/>
+<hr/>
+
+<a href="/new">Новая заметка</a> <!-- Ссылка для создания новой заметки -->
+</body>
+</html>

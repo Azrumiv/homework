@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Создание бина TestBean с указанием класса ru.web.first_app.TestBean -->
+    <bean id="TestBean" class="ru.web.first_app.TestBean">
+        <constructor-arg value="Succes"/> <!-- Установка значения "Succes" через конструктор -->
+    </bean>
+
+    <!-- Создание бина HelloBean с указанием класса ru.web.first_app.HelloBean -->
+    <bean id="HelloBean" class="ru.web.first_app.HelloBean">
+        <constructor-arg value="Привет, боб!" /> <!-- Установка русскоязычной строки через конструктор -->
+    </bean>
+
+</beans>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Создание новой заметки</title>
+</head>
+<body>
+<form method = "POST" th:action="@{/create}" th:object="${webNote}">
+	<!-- Форма для создания новой заметки, отправляет данные методом POST на /create с объектом webNote -->
+
+	<label for="id"> Введите ID: </label>
+	<input type = "number" th:field="*{id}" id="id"/>
+	<!-- Поле для ввода ID, связанное с полем id объекта webNote -->
+
+	<br>
+	<br>
+
+	<label for="note"> Введите заметку: </label>
+	<input type = "text" th:field="*{note}" id="note"/>
+	<!-- Поле для ввода заметки, связанное с полем note объекта webNote -->
+
+	<input type="submit" value="Добавить заметку"/>
+	<!-- Кнопка для отправки формы и добавления новой заметки -->
+
+</form>
+</body>
+</html>
